@@ -50,9 +50,9 @@ export default function ContactPage() {
             <div className="space-y-1">
               <p className="text-sm uppercase tracking-[0.2em] text-brand-300">{detail.title}</p>
               {detail.href ? (
-                <a href={detail.href} className="text-lg font-semibold text-white hover:text-brand-100">
+                <Link href={detail.href} className="text-lg font-semibold text-white hover:text-brand-100">
                   {detail.content}
-                </a>
+                </Link>
               ) : (
                 <p className="text-lg font-semibold text-white">{detail.content}</p>
               )}
