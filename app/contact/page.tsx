@@ -50,9 +50,14 @@ export default function ContactPage() {
             <div className="space-y-1">
               <p className="text-sm uppercase tracking-[0.2em] text-brand-300">{detail.title}</p>
               {detail.href ? (
-                <a href={detail.href} className="text-lg font-semibold text-white hover:text-brand-100">
+                <Link
+                  href={detail.href}
+                  className="text-lg font-semibold text-white hover:text-brand-100"
+                  target={detail.href.startsWith('http') ? '_blank' : undefined}
+                  rel={detail.href.startsWith('http') ? 'noreferrer' : undefined}
+                >
                   {detail.content}
-                </a>
+                </Link>
               ) : (
                 <p className="text-lg font-semibold text-white">{detail.content}</p>
               )}
@@ -68,7 +73,10 @@ export default function ContactPage() {
             Host your celebrations, corporate dinners, or cocktail receptions in our semi-private lounge. We offer curated
             set menus, beverage pairings, and dedicated service.
           </p>
-          <Link href="mailto:events@cheznguyenrestaurant.ca" className="text-sm font-semibold text-brand-100 hover:text-brand-50">
+          <Link
+            href="mailto:events@cheznguyenrestaurant.ca"
+            className="text-sm font-semibold text-brand-100 hover:text-brand-50"
+          >
             events@cheznguyenrestaurant.ca
           </Link>
         </div>
@@ -78,7 +86,10 @@ export default function ContactPage() {
             Bring Chez Nguyen to your office or home gathering. We craft custom menus for groups of any size with delivery or
             on-site service options.
           </p>
-          <Link href="mailto:catering@cheznguyenrestaurant.ca" className="text-sm font-semibold text-brand-100 hover:text-brand-50">
+          <Link
+            href="mailto:catering@cheznguyenrestaurant.ca"
+            className="text-sm font-semibold text-brand-100 hover:text-brand-50"
+          >
             catering@cheznguyenrestaurant.ca
           </Link>
         </div>
