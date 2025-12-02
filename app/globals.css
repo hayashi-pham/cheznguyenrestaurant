@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #0f1317;
+  color: #f4f6f2;
+}
+
+a {
+  @apply transition-colors duration-200;
+}
+
+.container-default {
+  @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-card {
+  @apply rounded-3xl bg-white/5 shadow-glow ring-1 ring-white/10 backdrop-blur;
+}
+
+.section-gradient {
+  background: radial-gradient(circle at 20% 20%, rgba(91, 140, 81, 0.15), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.06), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(91, 140, 81, 0.12), transparent 35%),
+    linear-gradient(135deg, #0f1317 0%, #0b1013 60%, #11181f 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, #d8e6d3, #8aaf82, #f1f3f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-border {
+  position: relative;
+}
+
+.card-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(91, 140, 81, 0.35));
+  mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+  -webkit-mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
+
+.hero-overlay {
+  background: radial-gradient(circle at top left, rgba(91, 140, 81, 0.25), transparent 45%),
+    radial-gradient(circle at bottom right, rgba(17, 24, 39, 0.55), transparent 45%);
+}
+
+.gradient-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+}
