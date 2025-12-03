@@ -41,11 +41,11 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href="tel:+14037618085"
+            href="tel:+14034548386"
             className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white hover:border-white/30 hover:bg-white/10"
           >
             <PhoneIcon className="h-4 w-4" />
-            (403) 761-8085
+            (403) 454-8386
           </a>
           <Link
             href="/contact"
@@ -80,11 +80,11 @@ export default function Navbar() {
             ))}
             <div className="flex flex-col gap-3">
               <a
-                href="tel:+14037618085"
+                href="tel:+14034548386"
                 className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white hover:border-white/30 hover:bg-white/10"
               >
                 <PhoneIcon className="h-4 w-4" />
-                (403) 761-8085
+                (403) 454-8386
               </a>
               <Link
                 href="/contact"
